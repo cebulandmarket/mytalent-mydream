@@ -745,6 +745,96 @@ body::after {
     color: var(--text-muted);
 }
 
+/* --- Support a Dream Section --- */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.support-card {
+    text-align: center;
+    padding: 40px 28px;
+    border-radius: var(--radius-lg);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.support-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.support-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 45, 149, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), var(--glow-pink);
+}
+
+.support-card:hover::before {
+    opacity: 1;
+}
+
+.support-card-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 45, 149, 0.1);
+    border: 1px solid rgba(255, 45, 149, 0.15);
+    color: var(--neon-pink);
+}
+
+.support-card-icon.icon-share {
+    background: rgba(178, 75, 243, 0.1);
+    border-color: rgba(178, 75, 243, 0.15);
+    color: var(--neon-purple);
+}
+
+.support-card-icon.icon-connect {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.15);
+    color: var(--neon-blue);
+}
+
+.support-card-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.support-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.support-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- CTA Section --- */
 .cta-section {
     position: relative;
