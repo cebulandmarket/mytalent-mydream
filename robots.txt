@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mytalentmydream.github.io/sitemap.xml
