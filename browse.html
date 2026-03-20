@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Talents — MyTalent.MyDream</title>
+    <meta name="description" content="Discover talented people from underprivileged communities. Browse by singing, art, dance, crafts, and more.">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-talent">MyTalent</span><span class="logo-dot">.</span><span class="logo-dream">MyDream</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html" class="active">Browse Talents</a></li>
+                <li><a href="submit.html">Submit Your Talent</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Browse <span class="gradient-text">Talents</span></h1>
+            <p>Discover the incredible gifts of people in our community</p>
+        </div>
+    </section>
+
+    <!-- Filters & Search -->
+    <section class="section browse-section">
+        <div class="container">
+            <div class="browse-controls">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="text" id="searchInput" placeholder="Search by name, talent, or location...">
+                </div>
+                <div class="filter-tabs" id="filterTabs">
+                    <button class="filter-tab active" data-category="all">All</button>
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="results-info">
+                <span id="resultsCount">0 talents found</span>
+            </div>
+
+            <div class="talents-grid" id="talentsGrid">
+                <!-- Populated by JS -->
+            </div>
+
+            <div class="no-results" id="noResults" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="64" height="64"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <h3>No talents found</h3>
+                <p>Try a different search or category</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyTalent.MyDream. Built with heart in Cebu, Philippines.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/talents.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>

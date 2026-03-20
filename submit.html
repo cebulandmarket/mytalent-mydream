@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Talent — MyTalent.MyDream</title>
+    <meta name="description" content="Share your talent with the world. Submit your gift and dream — it's completely free.">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-talent">MyTalent</span><span class="logo-dot">.</span><span class="logo-dream">MyDream</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Talents</a></li>
+                <li><a href="submit.html" class="active">Submit Your Talent</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Share Your <span class="gradient-text">Gift</span></h1>
+            <p>Tell the world about your talent and your dream. It's 100% free.</p>
+        </div>
+    </section>
+
+    <!-- Submit Form -->
+    <section class="section">
+        <div class="container">
+            <div class="form-wrapper">
+                <form id="talentForm" class="talent-form">
+                    <input type="hidden" name="access_key" value="09df7276-a4b9-440c-9342-b4c7971c1dce">
+                    <input type="hidden" name="subject" value="New Talent Submission — MyTalent.MyDream">
+                    <input type="hidden" name="from_name" value="MyTalent.MyDream">
+                    <input type="checkbox" name="botcheck" style="display:none;">
+
+                    <div class="form-section">
+                        <h3>About You</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="Full Name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age <span class="required">*</span></label>
+                                <input type="number" id="age" name="Age" required min="5" max="120" placeholder="Your age">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location <span class="required">*</span></label>
+                                <input type="text" id="location" name="Location" required placeholder="City or barangay">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact (Phone or Facebook) <span class="required">*</span></label>
+                                <input type="text" id="contact" name="Contact" required placeholder="How we can reach you">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Your Talent</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="talentCategory">Talent Category <span class="required">*</span></label>
+                                <select id="talentCategory" name="Talent Category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="Singing">Singing</option>
+                                    <option value="Dancing">Dancing</option>
+                                    <option value="Art & Drawing">Art & Drawing</option>
+                                    <option value="Music & Instruments">Music & Instruments</option>
+                                    <option value="Crafts & Handmade">Crafts & Handmade</option>
+                                    <option value="Cooking">Cooking</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Writing & Poetry">Writing & Poetry</option>
+                                    <option value="Acting & Performance">Acting & Performance</option>
+                                    <option value="Tech & Building">Tech & Building</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="talentDescription">Tell us about your talent <span class="required">*</span></label>
+                                <textarea id="talentDescription" name="Talent Description" required rows="4" placeholder="What do you do? How long have you been doing it? What makes it special?"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="videoLink">Video Link (YouTube, Facebook, TikTok)</label>
+                                <input type="url" id="videoLink" name="Video Link" placeholder="https://...">
+                                <span class="form-hint">Share a video of your talent — this helps people see what you can do</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Your Dream</h3>
+                        <div class="form-group full-width">
+                            <label for="dream">What is your dream? <span class="required">*</span></label>
+                            <textarea id="dream" name="Dream" required rows="4" placeholder="What do you dream of becoming? What would change your life? Tell us honestly — we're listening."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="howToHelp">How can someone help you? </label>
+                            <textarea id="howToHelp" name="How To Help" rows="3" placeholder="Training, equipment, scholarship, mentorship, exposure — anything you need"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Photo</h3>
+                        <div class="form-group full-width">
+                            <label for="photoLink">Photo Link (Google Drive, Facebook, Imgur)</label>
+                            <input type="url" id="photoLink" name="Photo Link" placeholder="https://...">
+                            <span class="form-hint">Upload your photo somewhere and paste the link here. We'll use it for your profile.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-agreement">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>I agree that my information will be published on MyTalent.MyDream to help me get discovered. I can request removal anytime.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                        Submit My Talent
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div class="form-success" id="formSuccess" style="display:none;">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="64" height="64"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h2>Your talent has been submitted!</h2>
+                    <p>We'll review your submission and create your profile page. You'll be discoverable by people who want to support your dream.</p>
+                    <a href="browse.html" class="btn btn-primary">Browse Other Talents</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyTalent.MyDream. Built with heart in Cebu, Philippines.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/submit.js"></script>
+</body>
+</html>

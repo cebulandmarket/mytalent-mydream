@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Profile — MyTalent.MyDream</title>
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-talent">MyTalent</span><span class="logo-dot">.</span><span class="logo-dream">MyDream</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Talents</a></li>
+                <li><a href="submit.html">Submit Your Talent</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <section class="section profile-section">
+        <div class="container">
+            <div class="profile-card" id="profileCard">
+                <!-- Populated by JS -->
+            </div>
+            <div class="profile-not-found" id="profileNotFound" style="display:none;">
+                <h2>Profile not found</h2>
+                <p>This talent profile doesn't exist or has been removed.</p>
+                <a href="browse.html" class="btn btn-primary">Browse Talents</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyTalent.MyDream. Built with heart in Cebu, Philippines.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/talents.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
