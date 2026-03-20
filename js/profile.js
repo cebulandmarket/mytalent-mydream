@@ -56,6 +56,20 @@ function renderProfile() {
            </div>`
         : '';
 
+    const gofundmeHTML = talent.gofundme
+        ? `<div class="profile-gofundme">
+               <div class="gofundme-icon">
+                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+               </div>
+               <h3>Support ${talent.name}'s Dream</h3>
+               <p>Help make this dream a reality. Every donation — big or small — brings them closer.</p>
+               <a href="${talent.gofundme}" target="_blank" class="btn btn-gofundme">
+                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                   Donate on GoFundMe
+               </a>
+           </div>`
+        : '';
+
     // Update page title
     document.title = `${talent.name} — MyTalent.MyDream`;
 
@@ -81,9 +95,12 @@ function renderProfile() {
             </div>
 
             ${helpHTML}
+
+            ${gofundmeHTML}
         </div>
         <div class="profile-actions">
             <button class="btn btn-primary" onclick="shareTalent()">Share This Talent</button>
+            ${talent.gofundme ? `<a href="${talent.gofundme}" target="_blank" class="btn btn-gofundme-sm">Donate</a>` : ''}
             <a href="browse.html" class="btn btn-secondary">Browse More Talents</a>
         </div>
     `;

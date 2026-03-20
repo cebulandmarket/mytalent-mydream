@@ -609,6 +609,23 @@ body::after {
     color: var(--text-dim);
 }
 
+.talent-card-donate {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(255, 45, 149, 0.85);
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(255, 45, 149, 0.4);
+    z-index: 3;
+    letter-spacing: 0.5px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
 .talent-card-body {
     padding: 22px;
 }
@@ -1018,6 +1035,102 @@ body::after {
 .profile-help-box .profile-section-title {
     color: var(--neon-gold);
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* --- GoFundMe Section --- */
+.profile-gofundme {
+    text-align: center;
+    padding: 36px;
+    margin-bottom: 36px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.06), rgba(178, 75, 243, 0.06), rgba(255, 45, 149, 0.06));
+    border: 1px solid rgba(255, 45, 149, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-gofundme::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+}
+
+.gofundme-icon {
+    color: var(--neon-pink);
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 12px rgba(255, 45, 149, 0.4));
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+    60% { transform: scale(1); }
+}
+
+.profile-gofundme h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.profile-gofundme p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-gofundme {
+    background: linear-gradient(135deg, #FF2D95, #FF6B6B);
+    color: white;
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 25px rgba(255, 45, 149, 0.3);
+    text-decoration: none;
+}
+
+.btn-gofundme:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 40px rgba(255, 45, 149, 0.5), 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gofundme-sm {
+    background: linear-gradient(135deg, #FF2D95, #FF6B6B);
+    color: white;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 0 15px rgba(255, 45, 149, 0.25);
+    text-decoration: none;
+}
+
+.btn-gofundme-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 45, 149, 0.4);
 }
 
 .profile-video {

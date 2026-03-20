@@ -46,9 +46,14 @@ function createTalentCard(talent) {
         ? `<img src="${talent.photo}" alt="${talent.name}" class="talent-card-image">`
         : `<div class="talent-card-placeholder">${initials}</div>`;
 
+    const gofundmeBadge = talent.gofundme
+        ? `<span class="talent-card-donate">♥ Support</span>`
+        : '';
+
     return `
         <a href="profile.html?id=${talent.id}" class="talent-card">
             ${photoHTML}
+            ${gofundmeBadge}
             <div class="talent-card-body">
                 <span class="talent-card-category">${cat.icon} ${cat.name}</span>
                 <h3 class="talent-card-name">${talent.name}</h3>

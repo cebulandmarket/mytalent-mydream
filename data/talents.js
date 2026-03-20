@@ -30,6 +30,7 @@ const TALENTS = [
     //     howToHelp: 'How people can help them',
     //     photo: '',
     //     video: '',
+    //     gofundme: 'https://www.gofundme.com/f/their-campaign-url',
     //     featured: true,
     //     dateAdded: '2026-03-20'
     // }
